@@ -24,7 +24,8 @@ export default defineConfig(({ mode, command }) => {
     },
     // vite 相关配置
     server: {
-      port: 80,
+      // 80 为 Windows 特权端口（系统排除范围），改用 3000
+      port: 3000,
       host: true,
       open: true,
       proxy: {
